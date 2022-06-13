@@ -4,7 +4,7 @@ Dado el proyecto actual, es necesario generar una solución que resuelva la sigu
 
 Se debe generar una API segura (OAuth2) con los siguientes endpoints:
 
-*POST /api/sale
+**POST /api/sale**
 
 ```json
 {
@@ -20,7 +20,7 @@ La información enviada se debe guardar en la base de datos, en un model `Person
 * UserID extraido del token usado en la base de datos
 * Es necesario considerar los migration
 
-*GET /api/sale
+**GET /api/sale**
 
 Este endpoint debe obtener los elementos de `Person` correspondientes al usuario ligado al token de seguridad.
 
