@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(['namespace'  => 'Auth'], function () {
+    Route::post('register', 'AuthController@register');
+    Route::post('login', 'AuthController@login');
+});
+
+Route::group(['namespace'  => 'Api\v1\Sales'], function () {
+    Route::get('sale', 'SalesController@getSale')->middleware('auth:api');;
+    Route::post('sale', 'SalesController@store')->middleware('auth:api');;
+});
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
